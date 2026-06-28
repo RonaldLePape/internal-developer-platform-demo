@@ -4,12 +4,10 @@ metadata:
   name: xapps.platform.ronald.dev
 spec:
   group: platform.ronald.dev
+  scope: Cluster
   names:
     kind: XApp
     plural: xapps
-  claimNames:
-    kind: App
-    plural: apps
   versions:
     - name: v1alpha1
       served: true

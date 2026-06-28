@@ -1,0 +1,7 @@
+apiVersion: platform.ronald.dev/v1alpha1
+kind: XApp
+metadata:
+  name: demo-api
+spec:
+  appName: demo-api
+  namespace: demo-api
