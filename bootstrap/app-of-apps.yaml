@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/RonaldLePape/idp-gitops-demo.git
     targetRevision: main
-    path: applications/platform
+    path: environments/local/applications/platform
 
   destination:
     server: https://kubernetes.default.svc
