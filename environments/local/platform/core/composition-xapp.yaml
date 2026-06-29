@@ -22,8 +22,8 @@ spec:
               kind: Namespace
               metadata:
                 name: placeholder
-                annotations:
-                  gotemplating.fn.crossplane.io/ready: "True"                
+            readinessChecks:
+              - type: None             
             patches:
               - type: FromCompositeFieldPath
                 fromFieldPath: spec.namespace
@@ -45,8 +45,6 @@ spec:
               metadata:
                 name: default-quota
                 namespace: placeholder
-                annotations:
-                  gotemplating.fn.crossplane.io/ready: "True"                
               spec:
                 hard:
                   requests.cpu: "500m"
@@ -54,6 +52,8 @@ spec:
                   limits.cpu: "1"
                   limits.memory: "1Gi"
                   pods: "10"
+            readinessChecks:
+              - type: None
             patches:
               - type: FromCompositeFieldPath
                 fromFieldPath: spec.namespace
@@ -66,8 +66,6 @@ spec:
               metadata:
                 name: default-limits
                 namespace: placeholder
-                annotations:
-                  gotemplating.fn.crossplane.io/ready: "True"
               spec:
                 limits:
                   - type: Container
@@ -77,6 +75,8 @@ spec:
                     defaultRequest:
                       cpu: "100m"
                       memory: "128Mi"
+            readinessChecks:
+              - type: None
             patches:
               - type: FromCompositeFieldPath
                 fromFieldPath: spec.namespace
