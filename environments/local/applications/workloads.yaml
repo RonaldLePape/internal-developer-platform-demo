@@ -4,7 +4,7 @@ metadata:
   name: workloads
   namespace: argocd
 spec:
-  project: default
+  project: workloads
   source:
     repoURL: https://github.com/RonaldLePape/idp-gitops-demo.git
     targetRevision: main
