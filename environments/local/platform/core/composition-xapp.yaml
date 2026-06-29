@@ -22,6 +22,8 @@ spec:
               kind: Namespace
               metadata:
                 name: placeholder
+                annotations:
+                  gotemplating.fn.crossplane.io/ready: "True"                
             patches:
               - type: FromCompositeFieldPath
                 fromFieldPath: spec.namespace
@@ -43,6 +45,8 @@ spec:
               metadata:
                 name: default-quota
                 namespace: placeholder
+                annotations:
+                  gotemplating.fn.crossplane.io/ready: "True"                
               spec:
                 hard:
                   requests.cpu: "500m"
@@ -62,6 +66,8 @@ spec:
               metadata:
                 name: default-limits
                 namespace: placeholder
+                annotations:
+                  gotemplating.fn.crossplane.io/ready: "True"
               spec:
                 limits:
                   - type: Container
