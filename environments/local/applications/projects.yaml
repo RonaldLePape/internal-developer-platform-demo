@@ -6,7 +6,7 @@ metadata:
 spec:
   description: Platform components
   sourceRepos:
-    - https://github.com/RonaldLePape/idp-gitops-demo.git
+    - https://github.com/RonaldLePape/internal-developer-platform-demo.git
   destinations:
     - server: https://kubernetes.default.svc
       namespace: "*"
@@ -22,7 +22,7 @@ metadata:
 spec:
   description: Application workload declarations
   sourceRepos:
-    - https://github.com/RonaldLePape/idp-gitops-demo.git
+    - https://github.com/RonaldLePape/internal-developer-platform-demo.git
   destinations:
     - server: https://kubernetes.default.svc
       namespace: "*"
